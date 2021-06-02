@@ -8,3 +8,10 @@ spring:
       profile: dev
 server:
   port: 8081
+
+#Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
