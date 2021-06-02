@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: text-message-generator
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: dev
+server:
+  port: 8081
