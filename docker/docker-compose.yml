@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  config-server:
+    image: brandaotaua/message-generator-config-server:v1
+    container_name: config-server
+    ports:
+      - 8888:8888
+  api:
+    image: brandaotaua/message-generator-api:v1
+    container_name: api
+    ports:
+      - 8081:8081
+    depends_on:
+      - config-server
